@@ -1,2 +1,1 @@
-# react-scratch
-React Scratch
+react-scratch
