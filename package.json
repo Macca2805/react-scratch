@@ -1,51 +1,49 @@
 {
-  "name": "react-scratch",
-  "version": "1.0.0",
-  "description": "React Scratch Environment",
-  "main": "index.js",
-  "dependencies": {
-    "intersperse": "^1.0.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-redux": "^5.0.6",
-    "react-router-dom": "^4.2.2",
-    "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0",
-    "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.10.1"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "babel-register": "^6.26.0",
-    "css-loader": "^0.28.8",
-    "less": "^2.7.3",
-    "less-loader": "^4.0.5",
-    "style-loader": "^0.19.1"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack.dev.config.js"
-  },
+  "name": "react-starter",
+  "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "react-scratch"
+    "url": "git+https://github.com/petertait/react-starter"
   },
-  "author": "",
-  "license": "ISC",
-  "babel": {
-    "presets": [
-      "es2015",
-      "react",
-      "stage-0"
-    ],
-    "plugins": [
-      "transform-object-rest-spread"
-    ]
+  "author": {
+    "name": "Peter Tait",
+    "email": "contact@petertait.com",
+    "url": "http://petertait.com"
+  },
+  "dependencies": {
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-router": "^2.4.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-react-hmre": "^1.1.1",
+    "css-loader": "^0.23.1",
+    "postcss-advanced-variables": "^1.2.2",
+    "postcss-color-function": "^2.0.0",
+    "postcss-conditionals": "^2.0.1",
+    "postcss-for": "^2.0.1",
+    "postcss-grid": "^2.0.0",
+    "postcss-loader": "^0.9.1",
+    "postcss-nesting": "^2.3.0",
+    "rucksack-css": "^0.8.5",
+    "eslint": "^2.11.0",
+    "eslint-loader": "^1.3.0",
+    "eslint-plugin-react": "^5.1.1",
+    "react-css-modules": "^3.7.6",
+    "rimraf": "^2.5.2",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --history-api-fallback --host 0.0.0.0 --hot --inline --progress",
+    "clean": "rm -rf build/scripts",
+    "build": "NODE_ENV=production webpack -p",
+    "publish": "NODE_ENV=production webpack -p; surge build"
   }
 }
