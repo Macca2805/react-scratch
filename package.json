@@ -41,7 +41,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
-    "start": "webpack-dev-server --history-api-fallback --host 0.0.0.0 --hot --inline --progress",
+    "start": "webpack-dev-server --history-api-fallback --host 127.0.0.1 --hot --inline --progress",
     "clean": "rm -rf build/scripts",
     "build": "NODE_ENV=production webpack -p",
     "publish": "NODE_ENV=production webpack -p; surge build"
